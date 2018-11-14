@@ -127,8 +127,3 @@ The shell itself doesn't care what the variable is called.
 > > {: .bash}
 > {: .solution}
 {: .challenge}
-
-This is our first look at loops. We will run another loop in the
-[Counting and Mining with the Shell]({{page.root}}/05-counting-mining) episode.
-
-![For Loop in Action](../fig/shell_script_for_loop_flow_chart.svg)
