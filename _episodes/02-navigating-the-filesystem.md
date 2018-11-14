@@ -5,8 +5,8 @@ exercises: 10
 questions:
 - "How do you move around the filesystem in the shell?"
 objectives:
-- "Use shell commands to work with directories and files"
-- "Use shell commands to find and manipulate data"
+- "Use shell commands to list directories and files"
+- "Use shell commands to move to a different directory"
 keypoints:
 - "Knowing where you are in your directory structure is key to working with the shell"
 ---
