@@ -33,7 +33,7 @@ $ pwd
 ~~~
 {: .bash}
 ~~~
-/Users/riley/Desktop/shell-lesson
+/Users/noah/Desktop/shell-lesson
 ~~~
 {: .output}
 
@@ -58,13 +58,13 @@ $ cd ..
 Instead of typing `cd firstdir`, let's try to type `cd f` and then hit the Tab key.
 We notice that the shell completes the line to `cd firstdir/`.
 
-> ## Tab for Auto-complete
+> ## Tab for auto-complete
 > Hitting tab at any time within the shell will prompt it to attempt to auto-complete
 > the line based on the files or sub-directories in the current directory.
 > Where two or more files have the same characters, the auto-complete will only fill up to the
 > first point of difference, after which we can add more characters, and
 > try using tab again. We would encourage using this method throughout
-> today to see how it behaves (as it saves loads of time and effort!).
+> the day to see how it behaves (as it saves lots of time and effort!).
 {: .callout}
 
 ### Reading files
@@ -76,17 +76,12 @@ Here there are copies of two public domain books downloaded from
 cover later.
 
 ~~~
-$ ls -lh
+$ ls
 ~~~
 {: .bash}
 ~~~
-total 139M
--rw-r--r-- 1 riley staff 3.6M Jan 31 18:47 2014-01-31_JA-africa.tsv
--rw-r--r-- 1 riley staff 7.4M Jan 31 18:47 2014-01-31_JA-america.tsv
--rw-rw-r-- 1 riley staff 126M Jun 10  2015 2014-01_JA.tsv
--rw-r--r-- 1 riley staff 1.4M Jan 31 18:47 2014-02-02_JA-britain.tsv
--rw-r--r-- 1 riley staff 583K Feb  1 22:53 33504-0.txt
--rw-r--r-- 1 riley staff 598K Jan 31 18:47 829-0.txt
+000003160_01_text.json  2014-01-31_JA-africa.tsv   2014-02-02_JA-britain.tsv  829-0.txt
+2014-01_JA.tsv          2014-01-31_JA-america.tsv  33504-0.txt                diary.html
 ~~~
 {: .output}
 
@@ -306,11 +301,10 @@ $ ls
 > {: .solution}
 {: .challenge}
 
-> ## The wildcards and regular expressions
+> ## Wildcards and regular expressions
 >
 > The `?` wildcard matches one character. The `*` wildcard matches zero or
-> more characters. If you attended the lesson on regular expressions, do you
-> remember how you would express that as regular expressions?
+> more characters. Do you remember how you would express that in regular expressions?
 >
 > (Regular expressions are not a feature of the shell, but some commands support
 > them. We'll get back to that.)
@@ -334,11 +328,11 @@ $ ls
 {: .challenge}
 
 > ## Using the `echo` command
-> The `echo` command simply prints out a text you specify. Try it out: `echo "Library Carpentry is awesome!"`.
+> The `echo` command simply prints out a text you specify. Try it out: `echo "The shell is awesome!"`.
 > Interesting, isn't it?
 >
-> You can also specify a variable, for instance `NAME=` followed by your name.
-> Then type `echo "$NAME is a fantastic library carpentry student"`. What happens?
+> You can also specify a variable, for instance, `NAME=` followed by your name.
+> Then type `echo "$NAME rules"`. What happens?
 >
 > You can combine both text and normal shell commands using `echo`, for example the
 > `pwd` command you have learned earlier today. You do this by enclosing a shell
@@ -366,5 +360,5 @@ Using wildcards, we can even delete lots of files. And adding the `-r` flag we
 can delete folders with all their content.
 
 **Unlike deleting from within our graphical user interface, there is *no* warning,
-*no* recycling bin from which you can get the files back and no other undo options!**
+*no* recycling bin from which you can get the files back, and no other undo options!**
 For that reason, please be very careful with `rm` and extremely careful with `rm -r`.
