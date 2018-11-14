@@ -38,7 +38,7 @@ $ pwd
 ~~~
 {: .output}
 
-The output will be a path to your home directory. Let's check if we recognise it
+The output will be a path to your home directory. Let's check if we recognize it
 by listing the contents of the directory. To do that, we use the `ls` command:
 
 ~~~
@@ -51,60 +51,7 @@ Desktop      Downloads    Movies       Pictures
 ~~~
 {: .output}
 
-We may want more information than just a list of files and directories.
-We can get this by specifying various **flags** (also known as `options`, `parameters`, or, most frequently,
-`arguments`) to go with our basic commands.
-Arguments modify the workings of the command by telling the computer what sort of output or manipulation we want.
-
-If we type `ls -l` and hit enter, the computer returns a list of files that contains
-information similar to what we would find in our Finder (Mac) or Explorer (Windows):
-the size of the files in bytes, the date it was created or last modified, and the file name.
-
-~~~
-$ ls -l
-~~~
-{: .bash}
-~~~
-total 0
-drwx------+  6 riley  staff   204 Jul 16 11:50 Desktop
-drwx------+  3 riley  staff   102 Jul 16 11:30 Documents
-drwx------+  3 riley  staff   102 Jul 16 11:30 Downloads
-drwx------@ 46 riley  staff  1564 Jul 16 11:38 Library
-drwx------+  3 riley  staff   102 Jul 16 11:30 Movies
-drwx------+  3 riley  staff   102 Jul 16 11:30 Music
-drwx------+  3 riley  staff   102 Jul 16 11:30 Pictures
-drwxr-xr-x+  5 riley  staff   170 Jul 16 11:30 Public
-~~~
-{: .output}
-
-In everyday usage we are more used to units of measurement like kilobytes, megabytes, and gigabytes.
-Luckily, there's another flag `-h` that when used with the -l option, use unit suffixes:
-Byte, Kilobyte, Megabyte, Gigabyte, Terabyte and Petabyte in order to reduce the
-number of digits to three or less using base 2 for sizes.
-
-Now `ls -h` won't work on its own. When we want to combine two flags,
-we can just run them together. So, by typing `ls -lh` and hitting
-enter we receive an output in a human-readable format (note: the order here doesn't matter).
-
-~~~
-$ ls -lh
-~~~
-{: .bash}
-~~~
-total 0
-drwx------+  6 riley  staff   204B Jul 16 11:50 Desktop
-drwx------+  3 riley  staff   102B Jul 16 11:30 Documents
-drwx------+  3 riley  staff   102B Jul 16 11:30 Downloads
-drwx------@ 46 riley  staff   1.5K Jul 16 11:38 Library
-drwx------+  3 riley  staff   102B Jul 16 11:30 Movies
-drwx------+  3 riley  staff   102B Jul 16 11:30 Music
-drwx------+  3 riley  staff   102B Jul 16 11:30 Pictures
-drwxr-xr-x+  5 riley  staff   170B Jul 16 11:30 Public
-~~~
-{: .output}
-
-We've now spent a great deal of time in our home directory.
-Let's go somewhere else. We can do that through the `cd` or Change Directory command:
+Now let's go somewhere else. We can do that through the `cd` or Change Directory command:
 (Note: On Windows and Mac, by default, the case of the file/directory doesn't matter
 On Linux it does.)
 
@@ -126,21 +73,18 @@ $ pwd
 {: .output}
 
 If something had gone wrong, however, the command would have told you. Let's
-test that by trying to move into a non-existentdirectory:
+test that by trying to move into a non-existent directory:
 
 ~~~
-$ cd "Evil plan to destroy the world"
+$ cd "Folder full of perfect code"
 ~~~
 {: .bash}
 ~~~
-bash: cd: Evil plan to destroy the world: No such file or directory
+bash: cd: Folder full of perfect code: No such file or directory
 ~~~
 {: .output}
 
-Notice that we surrounded the name by quotation marks. The *arguments* given
-to any shell command are separated by spaces, so a way to let them know that
-we mean 'one single thing called "Evil plan to destroy the world"', not
-'six different things', is to use (single or double) quotation marks.
+Notice that we surrounded the name by quotation marks. This lets the shell know that we mean 'one single thing called "Folder full of perfect code"', not 'six different things', is to use (single or double) quotation marks.
 
 We've now seen how we can go 'down' through our directory structure
 (as in into more nested directories). If we want to go back, we can type `cd ..`.
@@ -156,9 +100,9 @@ us right back to the home directory, the place where we started.**
 >
 > Move around the computer, get used to moving in and out of directories,
 > see how different file types appear in the Unix shell. Be sure to use the `pwd` and
-> `cd` commands, and the different flags for the `ls` command you learned so far.
+> `cd`, and `ls` commands you learned so far.
 >
-> If you run Windows,
+> If you're on' Windows,
 > also try typing `explorer .` to open Explorer for the current directory
 > (the single dot means "current directory"). If you're on a Mac,
 > try `open .` and for Linux try `xdg-open .`.
@@ -226,36 +170,5 @@ As we become more comfortable, we can get very quickly to the directory that we 
 > >
 > >~~~
 > >{: .output}
-> {: .solution}
-{: .challenge}
-
-
-> ## Find out about advanced `ls` commands
->
-> Find out, using the manual page, how to list the files in a
-> directory ordered by their filesize. Try it out in different directories. Can you combine it
-> with the `-l` *argument* you learned before?
->
-> Afterwards,
-> find out how you can order a list of files based on their last modification date.
-> Try ordering files in different directories.
->
-> > ## Answer
-> >
-> > To order files in a directory by their filesize, in combination with the `-l` argument:
-> >
-> > ~~~
-> > ls -lS
-> > ~~~
-> > {: .bash}
-> >
-> > Note that the `S` is **case-sensitive!**
-> >
-> > To order files in a directory by their last modification date, in combination with the `-l` argument:
-> >
-> > ~~~
-> > ls -lt
-> > ~~~
-> > {: .bash}
 > {: .solution}
 {: .challenge}
