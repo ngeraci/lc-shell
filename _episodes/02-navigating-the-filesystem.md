@@ -102,7 +102,7 @@ us right back to the home directory, the place where we started.**
 > see how different file types appear in the Unix shell. Be sure to use the `pwd` and
 > `cd`, and `ls` commands you learned so far.
 >
-> If you're on' Windows,
+> If you're on Windows,
 > also try typing `explorer .` to open Explorer for the current directory
 > (the single dot means "current directory"). If you're on a Mac,
 > try `open .` and for Linux try `xdg-open .`.
@@ -115,14 +115,14 @@ As we become more comfortable, we can get very quickly to the directory that we 
 
 > ## Getting help
 >
-> Use the `man` command to invoke the manual page (documentation) for a shell command.
+> Use the `man` command to view the manual page (documentation) for a shell command.
 > For example, `man ls` displays all the arguments available to you - which saves
 > you remembering them all! Try this for each command you've learned so far.
 > Use the `spacebar` to navigate the manual pages. Use `q` at any time to quit.
 >
-> ***Note*: this command is for Mac and Linux users only**. It does not work directly for Windows users.
-> If you use windows, you can search for the Shell command on [http://man.he.net/](http://man.he.net/),
-> and view the associated manual page.
+> ***Note*: this command only works on Mac and Linux**. It does not work directly on Windows.
+> If you use Windows, you can search for a command on [http://man.he.net/](http://man.he.net/),
+> and view the associated manual page. You can also often get more information about a command with the flag `--help`, such as `ls --help`.
 >
 > >## Answer
 > >~~~
