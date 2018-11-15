@@ -24,7 +24,7 @@ In this directory, we have 30 TIFF files and 30 JPEG files. The TIFF files are o
 
 (In real life, of course, they would be a collection of different images. For the purposes of this workshop, they're all copies of this cool cat from the [National Library of Medicine](https://collections.nlm.nih.gov/catalog/nlm:nlmuid-101611398-img)):
 
-![Black and white photo of a cat dressed as a nurse](https://ngeraci.github.io/lc-shell/assets/img/nlm_nlmuid-101611398-img.jpg)
+![Black and white photo of a cat dressed as a nurse](https://ngeraci.github.io/lc-shell/assets/img/nlm_nlmuid-101611398-img.jpg){:height="50%" width="50%"}
 
 Let's create our new directories:
 ~~~
