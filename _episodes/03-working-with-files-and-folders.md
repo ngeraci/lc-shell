@@ -16,12 +16,7 @@ keypoints:
 ## Working with files and folders
 
 As well as navigating directories, we can interact with files on the command line:
-we can read them, open them, run them, and even edit them. In fact, there's really
-no limit to what we *can* do in the shell, but even experienced shell users still switch to
-graphical user interfaces (GUIs) for many tasks, such as editing formatted text
-documents (Word or OpenOffice), browsing the web, editing images, etc. But if we
-wanted to make the same crop on hundreds of images, say, the pages of a scanned book,
-then we could automate that cropping work by using shell commands.
+we can read them, open them, run them, and even edit them. 
 
 We will try a few basic ways to interact with files. Let's first move into the
 `shell-lesson` directory on your desktop.
@@ -33,7 +28,7 @@ $ pwd
 ~~~
 {: .bash}
 ~~~
-/Users/noah/Desktop/shell-lesson
+/Users/yourname/Desktop/shell-lesson
 ~~~
 {: .output}
 
@@ -80,8 +75,9 @@ $ ls
 ~~~
 {: .bash}
 ~~~
-000003160_01_text.json  2014-01-31_JA-africa.tsv   2014-02-02_JA-britain.tsv  829-0.txt
-2014-01_JA.tsv          2014-01-31_JA-america.tsv  33504-0.txt                diary.html
+000003160_01_text.json    2014-01-31_JA-america.tsv  829-0.txt
+2014-01_JA.tsv            2014-02-02_JA-britain.tsv  diary.html
+2014-01-31_JA-africa.tsv  33504-0.txt                images/
 ~~~
 {: .output}
 
@@ -244,9 +240,10 @@ $ ls
 ~~~
 {: .bash}
 ~~~
-2014-01-31_JA-africa.tsv   2014-02-02_JA-britain.tsv  gulliver.txt
-2014-01-31_JA-america.tsv  33504-0.txt
-2014-01_JA.tsv
+000003160_01_text.json    2014-01-31_JA-america.tsv  gulliver.txt
+2014-01_JA.tsv            2014-02-02_JA-britain.tsv  diary.html
+2014-01-31_JA-africa.tsv  33504-0.txt                images/
+
 ~~~
 {: .output}
 
@@ -301,19 +298,6 @@ $ ls
 > {: .solution}
 {: .challenge}
 
-> ## Wildcards and regular expressions
->
-> The `?` wildcard matches one character. The `*` wildcard matches zero or
-> more characters. Do you remember how you would express that in regular expressions?
->
-> (Regular expressions are not a feature of the shell, but some commands support
-> them. We'll get back to that.)
->
-> > ## Answer
-> > * The `?` wildcard matches the regular expression `.` (a dot)
-> > * The `*` wildcard matches the regular expression `.*`
-> {: .solution}
-{: .challenge}
 
 > ## Using `history`
 > Use the `history` command to see a list of all the commands
