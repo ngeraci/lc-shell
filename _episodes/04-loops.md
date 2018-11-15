@@ -100,30 +100,3 @@ the list only included these four items, the shell exits the `for` loop at that 
 We have called the variable in this loop `filename`
 in order to make its purpose clearer to human readers.
 The shell itself doesn't care what the variable is called.
-
-> ## For loop exercise
-> Complete the blanks in the for loop below to print the name, first line, and last line
-> of each text file in the current directory.
->
-> ```
-> ___ file in *.txt
-> __
-> 	echo _file
-> 	head -n 1 ____
-> 	____
-> ____
-> ```
-> {: .bash}
->
-> > ## Solution
-> > ```
-> > for file in *.txt
-> > do
-> > 	echo $file
-> > 	head -n 1 $file
-> > 	tail -n 1 $file
-> > done
-> > ```
-> > {: .bash}
-> {: .solution}
-{: .challenge}
