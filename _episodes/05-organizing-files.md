@@ -26,12 +26,16 @@ In this directory, we have 30 TIFF files and 30 JPEG files. The TIFF files are o
 
 ![Black and white photo of a cat dressed as a nurse](https://ngeraci.github.io/lc-shell/assets/img/nlm_nlmuid-101611398-img.jpg)
 
+### Make directories
+
 Let's create our new directories:
 ~~~
 mkdir master
 mkdir access
 ~~~
 {: .bash}
+
+### Move TIFF files
 
 Now, let's write a loop that will move all files ending in `.tif` from our current directory to the directory `master`. We'll run it once with `echo` to make sure it will do what we want it to do:
 ~~~
@@ -104,6 +108,8 @@ nlm_nlmuid-101611398-img_015.tif  nlm_nlmuid-101611398-img_030.tif
 ~~~
 {: .output}
 
+### Move JPEG files
+
 Now let's repeat the same pattern with to move our JPEG files to `access`:
 
 ~~~
@@ -147,6 +153,8 @@ nlm_nlmuid-101611398-img_015.jpg  nlm_nlmuid-101611398-img_030.jpg
 ~~~
 {: .output}
 
+### Count files
+
 There's also a way we can combine commands to verify that we have the correct number of files in each folder. By using the pipe character (`|`), we can pass the output of `ls`, which lists files, to `wc -l`, which gets the word count (`wc`) of textual data in lines (`-l`).
 
 ~~~
@@ -169,3 +177,32 @@ ls master|wc -l
 {: .output}
 
 Cool, each directory has 30 files in it, like it should.  `ls|wc -l` is a useful combination to remember for counting the number of files in a directory.
+
+
+### Rename files
+What if we also want to rename these files? You may have noticed that all of the image files contain the characters `-img` within the filenames, like `nlm_nlmuid-101611398-img_007.jpg`. Perhaps including `-img` in image filenames was part of our workplace's old filenaming convention, but that's since changed. So we want to remove `-img` from all the filenames, like turning `nlm_nlmuid-101611398-img_007.jpg` into `nlm_nlmuid-101611398_007.jpg`
+
+Let's test the following loop:
+~~~
+for file in access/*.jpg master/*.tif; do echo mv $file ${file//-img/}; done
+~~~
+{: .bash}
+
+~~~
+mv access/nlm_nlmuid-101611398-img_001.jpg access/nlm_nlmuid-101611398_001.jpg
+mv access/nlm_nlmuid-101611398-img_002.jpg access/nlm_nlmuid-101611398_002.jpg
+mv access/nlm_nlmuid-101611398-img_003.jpg access/nlm_nlmuid-101611398_003.jpg
+mv access/nlm_nlmuid-101611398-img_004.jpg access/nlm_nlmuid-101611398_004.jpg
+...
+~~~
+{: .output}
+
+How does this work? The first part of the loop, `for file in access/*.jpg master/*.tif`; says that we're going to select all of the files in `access` that end in `.jpg`, and all of the files in `master` that end in `.tif`. `mv $file` moves the file, and `${file//-img/}` sets the file's destination location as a version of the file's name where `-img` is substituted with nothing, a bit like a command-line version of find and replace. The substitution pattern it uses works like this: `{input//text to find/text to replace found text with}`.
+
+To actually rename the files, let's now run the loop without `echo`:
+~~~
+for file in access/*.jpg master/*.tif; do mv $file ${file//-img/}; done
+~~~
+{: .bash}
+
+Hooray! We've now updated all our file names. We've taken a directory of 60 files, and in just a few minutes, organized them into subdirectories by file type, and changed their names to reflect our current filenaming practice.
