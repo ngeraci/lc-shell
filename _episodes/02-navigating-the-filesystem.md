@@ -26,15 +26,13 @@ about where you are. It stands for "print working directory" and the result of t
 command is printed to your standard output, which is the screen.
 
 Let's type `pwd` and hit enter to execute the command:
-(The `$` sign is used to indicate a command to be typed on the command prompt,
- but we never type the `$` sign itself, just what follows after it.)
 
 ~~~
-$ pwd
+pwd
 ~~~
 {: .bash}
 ~~~
-/Users/riley
+/Users/yourname
 ~~~
 {: .output}
 
@@ -42,7 +40,7 @@ The output will be a path to your home directory. Let's check if we recognize it
 by listing the contents of the directory. To do that, we use the `ls` command:
 
 ~~~
-$ ls
+ls
 ~~~
 {: .bash}
 ~~~
@@ -56,7 +54,7 @@ Now let's go somewhere else. We can do that through the `cd` or Change Directory
 On Linux it does.)
 
 ~~~
-$ cd Desktop
+cd Desktop
 ~~~
 {: .bash}
 
@@ -64,11 +62,11 @@ Notice that the command didn't output anything. This means that it was carried
 out successfully. Let's check by using `pwd`:
 
 ~~~
-$ pwd
+pwd
 ~~~
 {: .bash}
 ~~~
-/Users/riley/Desktop
+/Users/yourname/Desktop
 ~~~
 {: .output}
 
@@ -76,7 +74,7 @@ If something had gone wrong, however, the command would have told you. Let's
 test that by trying to move into a non-existent directory:
 
 ~~~
-$ cd "Folder full of perfect code"
+cd "Folder full of perfect code"
 ~~~
 {: .bash}
 ~~~
