@@ -4,10 +4,6 @@ title: Setup
 root: .
 ---
 
-To participate in this Library Carpentry lesson, you will need a working UNIX-like shell environment.
-Specifically we will be using Bash ([Bourne Again SHell](https://en.wikipedia.org/wiki/Bash_(Unix_shell))) which is standard on Linux and Mac OS. 
-Even if you are a Windows user, learning Bash will open up a powerful set of tools on your personal machine, in addition to familiarizing you with the standard remote interface used on almost all servers and super computers. 
-
 ## Terminal Setup
 
 Bash is the default shell on most Linux distributions and Mac OS. 
@@ -19,15 +15,13 @@ Windows users will need to install Git Bash to provide a UNIX-like environment.
     - Download the latest Git for Windows [installer](https://git-for-windows.github.io/).
     - Double click the `.exe` to run the installer (for example, `Git-2.13.3-64-bit.exe`) using the default settings.
     - Once installed, open the shell by selecting Git Bash from the start menu (in the Git folder).
-
-If you encounter issues, Software Carpentry maintains a [Configuration Problems and Solutions wiki page](https://github.com/swcarpentry/workshop-template/wiki/Configuration-Problems-and-Solutions) that may help.
     
 ## Data Files
 
 You need to download some files to follow this lesson:
 
-1. Download [shell-lesson.zip](https://github.com/LibraryCarpentry/lc-shell/raw/gh-pages/data/shell-lesson.zip) and move the file to your Desktop.
-2. Unzip/extract the file (ask your instructor if you need help with this step). You should end up with a new folder called `shell-lesson` on your Desktop.
+1. Download [shell-lesson.zip](https://github.com/ngeraci/pca-shell/raw/gh-pages/data/shell-lesson.zip) and move the file to your Desktop.
+2. Unzip/extract the file (ask if you need help with this step). You should end up with a new folder called `shell-lesson` on your Desktop.
 3. Open a terminal and type:
 
 ~~~
